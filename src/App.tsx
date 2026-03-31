@@ -112,7 +112,7 @@ export default function App() {
         <section className="pt-32 pb-20 px-6">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center">
-              <h1 className="text-slate-900 mb-4">
+              <h1 className="text-slate-900 mb-4 font-bold">
                 Ruan Pabllo Barbosa Claudino
               </h1>
               <h2>UI/UX Designer & Front-end Developer</h2>
