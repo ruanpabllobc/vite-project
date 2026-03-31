@@ -8,11 +8,15 @@ import {
   ChevronDown,
   Menu,
   X,
+  CircleQuestionMark,
+  Minus,
+  Plus,
 } from "lucide-react";
 import { useState } from "react";
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -412,6 +416,112 @@ export default function App() {
                     </ul>
                   </div>
                 </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section id="faq" className="py-20 px-6 bg-white">
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
+                <CircleQuestionMark className="size-8 text-indigo-600" />
+              </div>
+              <h2 className="text-slate-900 mb-4">Perguntas Frequentes</h2>
+              <p className="text-slate-600">
+                Conheça mais sobre minha trajetória e especialidades
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {/* FAQ Item 1 */}
+              <article className="bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-indigo-300 transition-colors">
+                <button
+                  onClick={() => setOpenFaqIndex(openFaqIndex === 0 ? null : 0)}
+                  className="w-full px-6 py-5 flex items-start justify-between gap-4 text-left"
+                  aria-expanded={openFaqIndex === 0}
+                >
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-slate-900 mb-1">
+                      Quem é Ruan Pabllo Barbosa Claudino?
+                    </h3>
+                    {openFaqIndex === 0 && (
+                      <p className="text-slate-600 mt-3 leading-relaxed">
+                        Ruan Pabllo é um Designer UI/UX e Desenvolvedor
+                        Front-end com bacharelado em TI e atualmente estudante
+                        de Engenharia de Software.
+                      </p>
+                    )}
+                  </div>
+                  <div className="shrink-0 mt-1">
+                    {openFaqIndex === 0 ? (
+                      <Minus className="size-5 text-indigo-600" />
+                    ) : (
+                      <Plus className="size-5 text-slate-400" />
+                    )}
+                  </div>
+                </button>
+              </article>
+
+              {/* FAQ Item 2 */}
+              <article className="bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-indigo-300 transition-colors">
+                <button
+                  onClick={() => setOpenFaqIndex(openFaqIndex === 1 ? null : 1)}
+                  className="w-full px-6 py-5 flex items-start justify-between gap-4 text-left"
+                  aria-expanded={openFaqIndex === 1}
+                >
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-slate-900 mb-1">
+                      Qual é a experiência profissional de Ruan Pabllo?
+                    </h3>
+                    {openFaqIndex === 1 && (
+                      <p className="text-slate-600 mt-3 leading-relaxed">
+                        Possui 4 anos de experiência no mercado, focando na
+                        criação de interfaces de alta fidelidade e manutenção
+                        front-end de aplicações, garantindo produtos visualmente
+                        atraentes e tecnicamente sólidos.
+                      </p>
+                    )}
+                  </div>
+                  <div className="shrink-0 mt-1">
+                    {openFaqIndex === 1 ? (
+                      <Minus className="size-5 text-indigo-600" />
+                    ) : (
+                      <Plus className="size-5 text-slate-400" />
+                    )}
+                  </div>
+                </button>
+              </article>
+
+              {/* FAQ Item 3 */}
+              <article className="bg-slate-50 rounded-xl overflow-hidden border border-slate-200 hover:border-indigo-300 transition-colors">
+                <button
+                  onClick={() => setOpenFaqIndex(openFaqIndex === 2 ? null : 2)}
+                  className="w-full px-6 py-5 flex items-start justify-between gap-4 text-left"
+                  aria-expanded={openFaqIndex === 2}
+                >
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-slate-900 mb-1">
+                      Quais são as principais competências técnicas?
+                    </h3>
+                    {openFaqIndex === 2 && (
+                      <p className="text-slate-600 mt-3 leading-relaxed">
+                        Suas especialidades incluem Design UI/UX e Design
+                        Vetorial, utilizando ferramentas como Figma, Photoshop e
+                        Illustrator. No front-end, domina tecnologias como
+                        React, TypeScript, Next.js, HTML5 e CSS3.
+                      </p>
+                    )}
+                  </div>
+                  <div className="shrink-0 mt-1">
+                    {openFaqIndex === 2 ? (
+                      <Minus className="size-5 text-indigo-600" />
+                    ) : (
+                      <Plus className="size-5 text-slate-400" />
+                    )}
+                  </div>
+                </button>
               </article>
             </div>
           </div>
