@@ -428,9 +428,11 @@ export default function App() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
                 <CircleQuestionMark className="size-8 text-indigo-600" />
               </div>
-              <h2 className="text-slate-900 mb-4">Perguntas Frequentes</h2>
+              <h2 className="text-slate-900 mb-4">
+                Frequently Asked Questions
+              </h2>
               <p className="text-slate-600">
-                Conheça mais sobre minha trajetória e especialidades
+                Learn more about my career path and specialties
               </p>
             </div>
 
@@ -444,13 +446,13 @@ export default function App() {
                 >
                   <div className="flex-1">
                     <h3 className="font-semibold text-slate-900 mb-1">
-                      Quem é Ruan Pabllo Barbosa Claudino?
+                      Who is Ruan Pabllo Barbosa Claudino?
                     </h3>
                     {openFaqIndex === 0 && (
                       <p className="text-slate-600 mt-3 leading-relaxed">
-                        Ruan Pabllo é um Designer UI/UX e Desenvolvedor
-                        Front-end com bacharelado em TI e atualmente estudante
-                        de Engenharia de Software.
+                        Ruan Pabllo is a UI/UX Designer and Front-end Developer
+                        with a Bachelor's in IT and is currently a Software
+                        Engineering student.
                       </p>
                     )}
                   </div>
@@ -473,14 +475,14 @@ export default function App() {
                 >
                   <div className="flex-1">
                     <h3 className="font-semibold text-slate-900 mb-1">
-                      Qual é a experiência profissional de Ruan Pabllo?
+                      What is Ruan Pabllo's professional experience?
                     </h3>
                     {openFaqIndex === 1 && (
                       <p className="text-slate-600 mt-3 leading-relaxed">
-                        Possui 4 anos de experiência no mercado, focando na
-                        criação de interfaces de alta fidelidade e manutenção
-                        front-end de aplicações, garantindo produtos visualmente
-                        atraentes e tecnicamente sólidos.
+                        He has 4 years of market experience, focusing on the
+                        creation of high-fidelity interfaces and front-end
+                        maintenance for applications, ensuring visually
+                        appealing and technically solid products.
                       </p>
                     )}
                   </div>
@@ -503,14 +505,14 @@ export default function App() {
                 >
                   <div className="flex-1">
                     <h3 className="font-semibold text-slate-900 mb-1">
-                      Quais são as principais competências técnicas?
+                      What are the main technical skills?
                     </h3>
                     {openFaqIndex === 2 && (
                       <p className="text-slate-600 mt-3 leading-relaxed">
-                        Suas especialidades incluem Design UI/UX e Design
-                        Vetorial, utilizando ferramentas como Figma, Photoshop e
-                        Illustrator. No front-end, domina tecnologias como
-                        React, TypeScript, Next.js, HTML5 e CSS3.
+                        His specialties include UI/UX Design and Vector Design,
+                        using tools like Figma, Photoshop, and Illustrator. In
+                        the front-end, he masters technologies such as React,
+                        TypeScript, Next.js, HTML5, and CSS3.
                       </p>
                     )}
                   </div>
@@ -574,8 +576,7 @@ export default function App() {
       <footer className="py-8 px-6 bg-slate-900 text-white">
         <div className="container mx-auto max-w-6xl text-center">
           <p className="text-slate-400">
-            © {new Date().getFullYear()} Portfolio. Built with React & Tailwind
-            CSS.
+            © {new Date().getFullYear()} Built with React & Tailwind CSS.
           </p>
         </div>
       </footer>
